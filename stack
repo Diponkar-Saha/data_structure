@@ -1,1 +1,113 @@
+package stack;
+
+import java.util.Scanner;
+import java.util.Stack;
+
+public class stac_k {
+	public static int Max=5; 
+	public static int top=-1;
+	public static int[] arr=new int[Max];
+	
+	//public static Stack<String> st=new Stack<String>();
+	
+	
+		
+	public static void main(String args[]) {
+		
+		//Maximum number of elements that can be stored
+		
+		Scanner scan=new Scanner(System.in);
+		
+		stac_k st=new stac_k();
+		int in;
+		while(true){
+	        System.out.println("Stack Menu");
+	        System.out.println("1.Push \n 2.Pop \n 3.Display \n4.Exit");
+	        System.out.println("Enter Your choice(1-4)");
+	        in=scan.nextInt();
+	        switch(in) {
+	        	
+	        case 1:{
+	        	st.push(scan);
+	        		break;
+	        }
+	        case 2:{
+	        	st.pop();
+	        	break;
+	        }
+	        case 3:{
+	        	st.display();
+	        	break;
+	        }
+	        case 4:{
+	        	
+	        	System.exit(0);
+	        }
+	        default:{
+	        	System.out.println("wro");
+	        }
+	        	
+	        		
+	        
+	        
+	        }
+	        
+	       
+	        
+	    }
+		
+	}
+
+	void push(Scanner scan) {
+		//Scanner scn=new Scanner(System.in);
+		int val;
+		if(top==Max-1) {
+			System.out.println("Stack full");
+			
+		}else {
+			val=scan.nextInt();
+			//scn.close();
+			top=top+1;
+			arr[top]=val;
+			System.out.println("item push");
+			
+			
+		}
+	
+		
+	}
+	 void pop ()  
+	    {  
+	        if (top == -1)  
+	        {  
+	            System.out.println("Underflow !!");  
+	           
+	        }  
+	        else   
+	        {  
+	            top --;   
+	            System.out.println("Item popped");  
+	           
+	        }  
+	    }  
+	
+	   void display ()  
+	    {
+	    	int i;
+		
+		if(top==-1)
+		{
+			System.out.println("\nStack is empty!!");
+		}
+		else
+		{
+    
+			System.out.println("\nStack is...\n");
+			for(i=top;i>=0;--i)
+				System.out.println(arr[i]);
+		}
+	    }  
+
+}
+
 
